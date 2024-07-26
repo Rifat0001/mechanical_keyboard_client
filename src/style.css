@@ -1,0 +1,25 @@
+.offer-background {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 300px; /* Height of the background area */
+    background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Gradient overlay (darker) */
+        rgba(0, 0, 0, 0.3) /* Gradient overlay (darker) */
+      ),
+      url('assets/bg-sec.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Fixed position for parallax effect */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  .offer-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+    color: #fff; /* White text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Optional padding */
+  }
+  
