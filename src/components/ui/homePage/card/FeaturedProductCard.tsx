@@ -1,6 +1,7 @@
 import Rating from "react-rating";
 import { TProduct } from "../../../../types";
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 type TFeaturedCardProps = {
   products: TProduct[];
@@ -19,7 +20,7 @@ const FeaturedProductCard = ({
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products?.slice(0, 6).map((product: TProduct) => (
-            <div key={product._id} className="border p-4 rounded-lg">
+            <div key={product._id} className="border shadow-md p-4 rounded-lg">
               <img
                 src={product?.image}
                 alt={product?.name}
@@ -55,9 +56,9 @@ const FeaturedProductCard = ({
           ))}
         </div>
         <div className="text-center">
-          <button onClick={handleSeeMore} className="btn btn-neutral mt-12">
+          <NavLink to='/product' ><button onClick={handleSeeMore} className="btn bg-violet-500 lg:px-8 lg:text-lg hover:bg-violet-600 border-none text-white mt-12">
             See More
-          </button>
+          </button></NavLink>
         </div>
       </section>
   );
