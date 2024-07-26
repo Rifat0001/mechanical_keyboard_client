@@ -50,7 +50,7 @@ const Products = () => {
 
   return (
     <>
-      <div className="mb-8">
+      <div className="p-4 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
           <SearchBar />
           <Sorting />

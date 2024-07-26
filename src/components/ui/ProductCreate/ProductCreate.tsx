@@ -29,7 +29,7 @@ const ProductCreate = () => {
         title: "Success",
         text: "Product created successfully",
       });
-      navigate("/products/management");
+      navigate("/product/management");
     } catch (err) {
       Swal.fire({
         icon: "error",

@@ -70,7 +70,7 @@ const ProductManagement = () => {
           </tbody>
         </table>
         <div className="text-center mt-4">
-          <NavLink to="/products/product-create">
+          <NavLink to="/product/product-create">
             <button className="btn btn-primary py-2 px-4 rounded mb-4">
               Create New Product
             </button>

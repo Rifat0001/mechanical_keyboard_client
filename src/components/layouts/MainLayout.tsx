@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div>
       <div className="flex flex-col min-h-screen container mx-auto ">
         <Header />
-        <main className="">
+        <main >
           <Outlet />
         </main>
       </div>

@@ -14,14 +14,9 @@ const FeaturedProductCard = ({
   handleSeeDetails,
 }: TFeaturedCardProps) => {
   return (
-    <>
-      <div className="mt-28 mb-16">
-        <h2 className="text-2xl font-bold flex justify-center">
-          Our Featured Products
-        </h2>
-        <div className="flex justify-center mb-8 mt-3">
-          <div className="bg-blue-600 text-center h-1 w-20 rounded-lg "></div>
-        </div>
+      <section className="my-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Feature <span className="text-violet-500" >Products</span> </h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products?.slice(0, 6).map((product: TProduct) => (
             <div key={product._id} className="border p-4 rounded-lg">
@@ -52,7 +47,7 @@ const FeaturedProductCard = ({
 
               <button
                 onClick={() => handleSeeDetails(product?._id)}
-                className="btn btn-primary mt-4 mb-2"
+                className="btn bg-white border font-bold border-violet-500 btn-outline text-violet-500 hover:bg-violet-600 mt-4 mb-2"
               >
                 See Details
               </button>
@@ -61,11 +56,10 @@ const FeaturedProductCard = ({
         </div>
         <div className="text-center">
           <button onClick={handleSeeMore} className="btn btn-neutral mt-12">
-            Explore More
+            See More
           </button>
         </div>
-      </div>
-    </>
+      </section>
   );
 };
 
