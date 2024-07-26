@@ -1,6 +1,6 @@
 const ServiceAdvertisement = () => {
   return (
-    <section className="my-10">
+    <section className="my-16">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">Why <span className="text-violet-500" >Choose Us</span> </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
