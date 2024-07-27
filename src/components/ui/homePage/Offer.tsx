@@ -35,7 +35,7 @@ const Offer: React.FC = () => {
     return (
         <section className=' flex flex-col offer-background justify-center items-center'>
             <div>
-                <h2 className="text-3xl font-bold text-center text-white mb-8">Our Grand Sale <span className="" >Will be Start in</span> </h2>
+                <h2 className="lg:text-4xl text-2xl font-bold text-center text-white mb-8">Our Grand Sale <span className="" >Will be Start in</span> </h2>
             </div>
             <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
                 <div className="flex flex-col p-4 bg-violet-500 rounded-box text-white">

@@ -23,3 +23,25 @@
     padding: 20px; /* Optional padding */
   }
   
+  .about-section-bg{
+    position: relative;
+    width: 100%; /* Full width */
+    height: 400px; /* Height of the background area */
+    background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Gradient overlay (darker) */
+        rgba(0, 0, 0, 0.3) /* Gradient overlay (darker) */
+      ),
+      url('assets/about-bg.png'); /* Background image */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Fixed position for parallax effect */
+    overflow: hidden; /* Hide any overflow */
+  }
+
+  @media only screen and (max-width: 768px) {
+    .about-section-bg{
+      height: 250px;
+    }
+  }
