@@ -44,7 +44,7 @@ const ProductUpdate = () => {
       title: "Success",
       text: "Product updated successfully",
     });
-    navigate("/products/management");
+    navigate("/product/management");
   };
 
   return (
