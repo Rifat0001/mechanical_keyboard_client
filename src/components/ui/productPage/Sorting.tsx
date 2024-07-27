@@ -17,9 +17,8 @@ const Sorting = () => {
 
   return (
     <div className="mt-4">
-      <label className="mr-2 text-md font-semibold">Sort By Price</label>
-      <select className="select select-bordered" onChange={handleSortChange}>
-        <option value="">Price</option>
+      <select className="select select-bordered lg:w-auto w-full border-violet-500" onChange={handleSortChange}>
+        <option value="">Filter by Price</option>
         <option value="desc">High to Low</option>
         <option value="asc">Low to High</option>
       </select>

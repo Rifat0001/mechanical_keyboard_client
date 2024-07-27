@@ -51,12 +51,12 @@ const Products = () => {
   return (
     <>
       <div className="p-4 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center  space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
           <SearchBar />
           <Sorting />
           <ClearFilterButton />
         </div>
-        <h1 className="text-2xl font-bold mb-4">Products</h1>
+        <h2 className="text-3xl font-bold text-center mb-8">Our <span className="text-violet-500" >Products</span> </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products?.data?.map((product: TProduct) => (
             <div key={product._id} className="border p-4">
@@ -87,7 +87,7 @@ const Products = () => {
 
               <button
                 onClick={() => handleSeeDetails(product?._id)}
-                className="btn btn-primary mt-4 mb-2"
+                className="btn bg-violet-500 text-white mt-4 mb-2"
               >
                 See Details
               </button>

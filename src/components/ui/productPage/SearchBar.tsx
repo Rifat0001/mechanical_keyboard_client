@@ -6,7 +6,7 @@ const SearchBar = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <label className="input input-bordered flex items-center gap-2">
+    <label className="input input-bordered border-2 border-violet-500 w-full flex items-center gap-2">
       <input
         onChange={(e) => dispatch(setSearchTerm(e.target.value))}
         type="text"
