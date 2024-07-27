@@ -31,7 +31,7 @@ const Checkout = () => {
         title: "Successfully",
         text: "Order confirmed Successfully",
       });
-      navigate("/products/success");
+      navigate("/product/success");
     } catch (err) {
       Swal.fire({
         icon: "error",

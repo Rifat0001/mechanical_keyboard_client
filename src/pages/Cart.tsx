@@ -5,6 +5,7 @@ import {
   updateCartQuantity,
 } from "../redux/features/cart/cartSlice";
 import CartCard from "../components/ui/cartPage/CartCard";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   //grab cart data from local state
@@ -19,13 +20,19 @@ const Cart = () => {
   };
   // handle remove from cart
   const handleRemoveFromCart = (id: string) => {
-    if (
-      window.confirm(
-        "Are you sure, you want to remove this item from the cart?"
-      )
-    ) {
-      dispatch(removeFromCart(id));
-    }
+    Swal.fire({
+      title: "Do you want to delete the product?",
+      showDenyButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        dispatch(removeFromCart(id));
+        Swal.fire("Saved!", "", "success");
+      } else {
+        
+      }
+    });
   };
   //handle update quantity
   const handleUpdateQuantity = (id: string, quantity: number) => {

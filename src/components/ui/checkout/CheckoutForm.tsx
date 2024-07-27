@@ -23,7 +23,7 @@ const CheckoutForm = ({
     <>
       <div className="mb-8 p-4">
         <div className=" md:w-3/4 md:mx-auto">
-          <h1 className="text-3xl font-bold ml-6 mt-3">Checkout</h1>
+          <h1 className="text-3xl text-violet-500 text-center font-bold ml-6 mt-3">Checkout</h1>
           <div>
             <div className="bg-base-100 w-full h-full shadow-2xl">
               <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -89,7 +89,7 @@ const CheckoutForm = ({
                 <div className="form-control mt-6 w-1/4">
                   <button
                     disabled={cart.items.length === 0}
-                    className="btn btn-primary"
+                    className="btn bg-violet-500 hover:bg-violet-600 text-white "
                   >
                     Place Order
                   </button>

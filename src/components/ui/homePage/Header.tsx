@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
 import logo from '../../../assets/keyboard.png'
+import { useAppSelector } from "../../../redux/hooks";
+import { RootState } from "../../../redux/store";
 const Header = () => {
+  const cart = useAppSelector((state: RootState) => state.cart);
+  const totalPrice = () => {
+    return cart.items.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+  };
   return (
     <div className="navbar bg-black px-5 lg:px-10">
       <div className="navbar-start">
@@ -21,7 +30,7 @@ const Header = () => {
             <li><NavLink className='font-bold text-black hover:text-violet-500' to='/contact-us'>Contact Us</NavLink></li>
           </ul>
         </div>
-        <NavLink to='/'><img src={logo} className="w-20" alt="" /></NavLink>
+        <NavLink to='/'><img src={logo} className="lg:w-[110px] w-20" alt="" /></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -48,17 +57,17 @@ const Header = () => {
                   strokeWidth="2"
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
-              <span className="badge badge-sm indicator-item">8</span>
+              <span className="badge badge-sm indicator-item">{cart.items.length}</span>
             </div>
           </div>
           <div
             tabIndex={0}
             className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-40 shadow">
             <div className="card-body">
-              <span className="text-lg font-bold">8 Items Added</span>
-              <span className="">Subtotal: <span className="text-violet-400 font-bold">$999</span></span>
+              <span className="text-lg font-bold">{cart.items.length} Items Added</span>
+              <span className="">Total: <span className="text-violet-400 font-bold">${totalPrice().toFixed(2)}</span></span>
               <div className="card-actions">
-                <NavLink to='/products/cart' className='w-full'>
+                <NavLink to='/product/cart' className='w-full'>
                   <button className="btn bg-violet-500 hover:bg-violet-600 text-white  ">View cart</button>
                 </NavLink>
               </div>

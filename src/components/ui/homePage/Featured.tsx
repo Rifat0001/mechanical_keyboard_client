@@ -16,12 +16,12 @@ const Featured = () => {
 
   // explore more button functionality
   const handleSeeMore = () => {
-    navigate("/products");
+    navigate("/product");
   };
 
   //view details  button functionality
   const handleSeeDetails = (id: string) => {
-    navigate(`/products/details/${id}`);
+    navigate(`/product/details/${id}`);
   };
 
   // if data is loading showing progress

@@ -19,14 +19,19 @@ const ProductManagement = () => {
   }
   //handle delete
   const handleDelete = (id: string) => {
-    if (window.confirm("Are you sure, you want to delete")) {
-      deleteProduct(id);
-      Swal.fire({
-        icon: "success",
-        title: "Successfully",
-        text: "Product deleted successfully",
-      });
-    }
+    Swal.fire({
+      title: "Do you want to delete the product?",
+      showDenyButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        deleteProduct(id);
+        Swal.fire("Saved!", "", "success");
+      } else {
+        
+      }
+    });
   };
 
   return (

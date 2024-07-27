@@ -59,7 +59,7 @@ const HeroSection = () => {
                 >
                     <div className="flex flex-col items-center space-y-4 justify-center w-full h-full bg-black bg-opacity-50">
                         <h1 className="text-3xl lg:text-5xl text-center font-bold text-white">{slide.heading}</h1>
-                        <p className="text-md lg:text-xl text-center text-white">{slide.subheading}</p>
+                        <p className="text-md lg:text-xl text-center text-gray-300">{slide.subheading}</p>
                         <NavLink to='/product' >
                             <button className='btn bg-violet-500 lg:px-8 lg:text-lg hover:bg-violet-600 border-none text-white '>Shop Now</button></NavLink>
                     </div>

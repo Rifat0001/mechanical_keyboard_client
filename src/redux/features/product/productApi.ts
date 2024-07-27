@@ -7,7 +7,7 @@ const productApi = baseApi.injectEndpoints({
         const params = new URLSearchParams(filters).toString();
         return {
           url: `product?${params}`,
-          method: "GET",
+        method: "GET"
         };
       },
     }),
