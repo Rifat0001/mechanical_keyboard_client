@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import logo from '../../../assets/keyboard.png'
 const Footer = () => {
   return (
-    <footer className="footer flex justify-between items-center bg-black text-white  p-10">
+    <footer className="footer flex lg:flex-row
+     flex-col lg:justify-between lg:items-center bg-black text-white  p-10">
       <nav>
        <img src={logo} className="w-32" alt="" />
         <p>

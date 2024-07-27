@@ -51,7 +51,7 @@ const ProductUpdate = () => {
     <>
       <div className="mb-8 p-4">
         <div className=" md:w-3/4 md:mx-auto">
-          <h1 className="text-3xl font-bold ml-6 mt-3">Update Product</h1>
+        <h2 className="text-3xl font-bold text-center mb-8">Update <span className="text-violet-500" >Product</span> </h2>
           <div>
             <div className="bg-base-100 w-full h-full shadow-2xl">
               <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -145,7 +145,7 @@ const ProductUpdate = () => {
                 </div>
 
                 <div className="form-control mt-6 w-1/4">
-                  <button className="btn btn-primary">Update</button>
+                  <button className="btn bg-violet-500 hover:bg-violet-600 text-white w-full">Update</button>
                 </div>
               </form>
             </div>
