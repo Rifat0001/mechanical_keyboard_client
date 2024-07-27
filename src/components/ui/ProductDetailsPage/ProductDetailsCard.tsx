@@ -13,24 +13,24 @@ const ProductDetailsCard = ({
 }: TProductDetailsProps) => {
   return (
     <>
-      <div className="card card-side bg-base-100 shadow-xl mb-8">
-        <figure>
+      <div className="flex lg:flex-row flex-col p-8 lg:p-16 gap-8 bg-base-100 ">
+        <div className="w-full">
           <img
-            className="w-full md:h-96"
+            className="w-full rounded-lg md:h-96"
             src={product.image}
             alt={product.name}
           />
-        </figure>
-        <div className="card-body">
+        </div>
+        <div className="w-full">
           <h3 className="text-xl font-bold mb-4">{product?.name}</h3>
-          <h3 className="text-lg mb-2">Brand : {product?.brand}</h3>
-          <h5 className="text-lg mb-2">
-            Available Quantity: {product?.quantity}
+          <h3 className="text-lg mb-2"><span className="font-bold">Brand</span> : {product?.brand}</h3>
+          <h5 className="text-lg mb-2"><span className="font-bold">Available Quantity: </span>
+             {product?.quantity}
           </h5>
-          <h5 className="text-lg mb-2">Price: ${product?.price}</h5>
+          <h5 className="text-lg mb-2"><span className="font-bold">Price: </span>${product?.price}</h5>
 
           <div className="flex gap-1 items-center ">
-            <h5 className="text-lg mb-2">Rating: </h5>
+            <h5 className="text-lg mb-2"><span className="font-bold">Rating: </span></h5>
             {/* @ts-expect-error: Type issue with Rating component */}
             <Rating
               className="text-yellow-500"
@@ -41,11 +41,11 @@ const ProductDetailsCard = ({
               readonly
             />
           </div>
-          <h5 className="text-lg mb-2">Description: {product?.description}</h5>
+          <h5 className="text-lg mb-2"><span className="font-bold">Description: </span>{product?.description}</h5>
 
-          <div className="card-actions justify-end">
+          <div className="card-actions">
             <button
-              className={`btn ${
+              className={`btn bg-violet-500 hover:bg-violet-600 text-white ${
                 !product.quantity ? "btn-disabled" : "btn-primary"
               }`}
               onClick={handleAddToCart}

@@ -16,7 +16,7 @@ const Products = () => {
   const navigate = useNavigate();
 
   const handleSeeDetails = (id: string) => {
-    navigate(`/products/details/${id}`);
+    navigate(`/product/details/${id}`);
   };
 
   const { searchTerm, sort } = useAppSelector(
@@ -87,7 +87,7 @@ const Products = () => {
 
               <button
                 onClick={() => handleSeeDetails(product?._id)}
-                className="btn bg-violet-500 text-white mt-4 mb-2"
+                className="btn bg-violet-500 hover:bg-violet-600 text-white mt-4 mb-2"
               >
                 See Details
               </button>
