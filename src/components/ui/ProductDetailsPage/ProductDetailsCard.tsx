@@ -22,10 +22,10 @@ const ProductDetailsCard = ({
           />
         </div>
         <div className="w-full">
-          <h3 className="text-xl font-bold mb-4">{product?.name}</h3>
+          <h1 className="text-3xl font-bold mb-4">{product?.name}</h1>
           <h3 className="text-lg mb-2"><span className="font-bold">Brand</span> : {product?.brand}</h3>
           <h5 className="text-lg mb-2"><span className="font-bold">Available Quantity: </span>
-             {product?.quantity}
+            {product?.quantity}
           </h5>
           <h5 className="text-lg mb-2"><span className="font-bold">Price: </span>${product?.price}</h5>
 
@@ -45,9 +45,8 @@ const ProductDetailsCard = ({
 
           <div className="card-actions">
             <button
-              className={`btn bg-violet-500 hover:bg-violet-600 text-white ${
-                !product.quantity ? "btn-disabled" : "btn-primary"
-              }`}
+              className={`btn bg-violet-500 hover:bg-violet-600 text-white ${!product.quantity ? "btn-disabled" : "btn-primary"
+                }`}
               onClick={handleAddToCart}
               disabled={product.quantity === 0}
             >

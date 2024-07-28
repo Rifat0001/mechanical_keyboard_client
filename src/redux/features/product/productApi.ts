@@ -7,9 +7,10 @@ const productApi = baseApi.injectEndpoints({
         const params = new URLSearchParams(filters).toString();
         return {
           url: `product?${params}`,
-        method: "GET"
+          method: "GET"
         };
       },
+      providesTags: ['product'],
     }),
 
     getSingleProduct: builder.query({
@@ -19,6 +20,7 @@ const productApi = baseApi.injectEndpoints({
           method: "GET",
         };
       },
+      providesTags: ['product'],
     }),
 
     createProduct: builder.mutation({
@@ -29,6 +31,7 @@ const productApi = baseApi.injectEndpoints({
           body: product,
         };
       },
+      invalidatesTags: ['product'],
     }),
 
     updateProduct: builder.mutation({
@@ -39,6 +42,7 @@ const productApi = baseApi.injectEndpoints({
           body: product,
         };
       },
+      invalidatesTags: ['product'],
     }),
 
     deleteProduct: builder.mutation({
@@ -48,6 +52,7 @@ const productApi = baseApi.injectEndpoints({
           method: "DELETE",
         };
       },
+      invalidatesTags: ['product'],
     }),
   }),
 });

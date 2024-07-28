@@ -4,7 +4,7 @@ import { TCartInitialState } from "../../../types";
 const initialState: TCartInitialState = {
   items: [],
 };
-
+// here redux persis is used for store the data in localStorage
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -19,7 +19,21 @@ export const cartSlice = createSlice({
           existingProduct.quantity += 1;
         }
       } else {
-        state.items.push({ ...action.payload, quantity: 1 });
+        // Check localStorage for existing items before adding a new one
+        const storedCart = localStorage.getItem('cart'); // Or use appropriate storage method
+        const parsedCart = storedCart ? JSON.parse(storedCart) : [];
+        const existingItemInStorage = parsedCart.find(
+          (item) => item._id === action.payload._id
+        );
+
+        if (existingItemInStorage) {
+          state.items.push({
+            ...action.payload,
+            quantity: existingItemInStorage.quantity,
+          });
+        } else {
+          state.items.push({ ...action.payload, quantity: 1 });
+        }
       }
     },
     removeFromCart: (state, action: PayloadAction<string>) => {
