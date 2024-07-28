@@ -5,6 +5,7 @@ import bg1 from '../../../assets/bg1.webp';
 import bg2 from '../../../assets/bg2.webp';
 import bg3 from '../../../assets/bg3.webp';
 import { NavLink } from 'react-router-dom';
+import { Fade } from 'react-awesome-reveal';
 interface Slide {
     image: string;
     heading: string;
@@ -58,7 +59,8 @@ const HeroSection = () => {
                     style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                     <div className="flex flex-col items-center space-y-4 justify-center w-full h-full bg-black bg-opacity-50">
-                        <h1 className="text-3xl lg:text-5xl text-center font-bold text-white">{slide.heading}</h1>
+                    <Fade delay={1e2} cascade damping={1e-1}>
+                        <h1 className="text-3xl lg:text-5xl text-center font-bold text-white">{slide.heading}</h1></Fade>
                         <p className="text-md lg:text-xl text-center text-gray-300">{slide.subheading}</p>
                         <NavLink to='/product' >
                             <button className='btn bg-violet-500 lg:px-8 lg:text-lg hover:bg-violet-600 border-none text-white '>Shop Now</button></NavLink>

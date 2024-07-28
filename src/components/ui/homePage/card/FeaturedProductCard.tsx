@@ -2,6 +2,7 @@ import Rating from "react-rating";
 import { TProduct } from "../../../../types";
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import { Slide } from "react-awesome-reveal";
 
 type TFeaturedCardProps = {
   products: TProduct[];
@@ -16,7 +17,8 @@ const FeaturedProductCard = ({
 }: TFeaturedCardProps) => {
   return (
       <section className="my-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Feature <span className="text-violet-500" >Products</span> </h2>
+        <Slide>
+        <h2 className="text-3xl font-bold text-center mb-8">Feature <span className="text-violet-500" >Products</span> </h2></Slide>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products?.slice(0, 6).map((product: TProduct) => (
