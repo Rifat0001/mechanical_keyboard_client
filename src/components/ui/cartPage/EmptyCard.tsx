@@ -1,16 +1,17 @@
+import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
 
 const EmptyCard = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center ">
+      <Fade delay={1e2} cascade damping={1e-1}>
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Your Cart is Empty
+            No Product Added
           </h1>
           <p className="text-gray-700 mb-6">
-            Looks like you haven't added anything to your cart yet. Browse our
-            products and find something you like!
+            First add your product from product page
           </p>
           <div className="flex justify-center">
             <NavLink to="/product">
@@ -20,6 +21,7 @@ const EmptyCard = () => {
             </NavLink>
           </div>
         </div>
+        </Fade>
       </div>
     </>
   );

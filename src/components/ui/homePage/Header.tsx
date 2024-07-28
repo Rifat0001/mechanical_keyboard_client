@@ -62,7 +62,7 @@ const Header = () => {
           </div>
           <div
             tabIndex={0}
-            className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-40 shadow">
+          className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-40 shadow">
             <div className="card-body">
               <span className="text-lg font-bold">{cart.items.length} Items Added</span>
               <span className="">Total: <span className="text-violet-400 font-bold">${totalPrice().toFixed(2)}</span></span>
