@@ -3,8 +3,9 @@ import { Slide } from "react-awesome-reveal";
 const Faq = () => {
     return (
         <section className="my-16">
-             <Slide>
-            <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked <span className="text-violet-500" >Questions</span> </h2></Slide>
+            <Slide>
+                <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked <span className="text-violet-500" >Questions</span> </h2></Slide>
+            {/* Faq section started  */}
             <div className="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" defaultChecked />
                 <div className="collapse-title text-xl  border-2  font-medium">What are mechanical keyboards, and how do they differ from membrane keyboards?</div>
