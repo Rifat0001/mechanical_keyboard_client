@@ -31,7 +31,7 @@ const testimonials = [
 
 const Review = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [autoplayInterval, setAutoplayInterval] = useState(5000); // 5 seconds
+  const [autoplayInterval,] = useState(5000); // 5 seconds
 
   useEffect(() => {
     const intervalId = setInterval(() => {

@@ -4,8 +4,8 @@
     height: 300px; /* Height of the background area */
     background-image: 
       linear-gradient(
-        rgba(0, 0, 0, 0.3), /* Gradient overlay (darker) */
-        rgba(0, 0, 0, 0.3) /* Gradient overlay (darker) */
+        rgba(211, 203, 203, 0.3), /* Gradient overlay (darker) */
+        rgba(170, 168, 168, 0.3) /* Gradient overlay (darker) */
       ),
       url('assets/bg-sec.jpg'); /* Background image */
     background-size: cover; /* Cover the entire element */

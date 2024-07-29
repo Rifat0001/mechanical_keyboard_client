@@ -14,11 +14,6 @@ const Featured = () => {
 
   const navigate = useNavigate();
 
-  // explore more button functionality
-  const handleSeeMore = () => {
-    navigate("/product");
-  };
-
   //view details  button functionality
   const handleSeeDetails = (id: string) => {
     navigate(`/product/details/${id}`);
@@ -44,7 +39,6 @@ const Featured = () => {
     <>
       <FeaturedProductCard
         products={products.data}
-        handleSeeMore={handleSeeMore}
         handleSeeDetails={handleSeeDetails}
       ></FeaturedProductCard>
     </>
