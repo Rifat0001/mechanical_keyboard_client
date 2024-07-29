@@ -33,15 +33,15 @@ This is client site of the Mechanical Keyboard Shop. It is built using React, Re
 
 ### Usage
 
-1. Navigate through the application to explore different features like product listings, search functionality, and more.
-2. You can manage the state using Redux, and data fetching is handled by RTK Query.
-3. For styling use Tailwind CSS and DaisyUI to create responsive and modern UI components.
+1. Product can be search by name and brand , filter function also added from backend
+2. State is managaed Redux, and data fetching is handled by RTK Query.
+3. Tailwind CSS and DaisyUI is used to create responsive and modern UI components.
 
 ### Features
 
-- Product Listings: Displays all products with search and filter functionalities.
-- Sorting: Sort products by price and other criteria.
-- Cart Management: Add, remove, and update product quantities in the cart.
+- Product Listings: Displays all products with search and filter functions.
+- Sorting: Can sort from price high to low and the newest product will be display first.
+- Cart Management: Add, remove, and update product quantities in the cart page.
 - Checkout: Collect user information and process orders.
 - Responsive Design: Built with Tailwind CSS and DaisyUI.
 
