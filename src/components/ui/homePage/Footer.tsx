@@ -5,14 +5,14 @@ const Footer = () => {
     <footer className="footer flex lg:flex-row
      flex-col lg:justify-between lg:items-center bg-black text-white  p-10">
       <nav>
-       <img src={logo} className="w-32" alt="" />
+        <img src={logo} className="w-32" alt="" />
         <p className="text-lg">
           Mechanical Keyboard Shop
           <br />
           Providing reliable tech since 1992
         </p>
       </nav>
-      
+
       <nav className="text-lg">
         <h6 className="footer-title">Company</h6>
         <NavLink className="text-white hover:text-violet-500" to='/'>Home</NavLink>
@@ -26,9 +26,10 @@ const Footer = () => {
         <a className="link link-hover">Privacy policy</a>
         <a className="link link-hover">Cookie policy</a>
       </nav>
-      <form  className="text-lg">
+      {/* only show in pc  */}
+      <form className="text-lg lg:block hidden">
         <h6 className="footer-title">Newsletter</h6>
-        <fieldset className="form-control w-80">
+        <fieldset className="form-control w-64">
           <label className="label">
             <span className="label-text text-white">Enter your email address</span>
           </label>
